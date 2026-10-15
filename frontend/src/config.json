@@ -1,0 +1,101 @@
+{
+  "couple": {
+    "first": "Mr. Ali",
+    "second": "Mrs. Ali",
+    "monogram": "A",
+    "line1": "Mr. &",
+    "line2": "Mrs. Ali"
+  },
+  "weddingDate": "2026-11-16T19:00:00+05:00",
+  "dateDisplay": {
+    "day": "16",
+    "month": "NOVEMBER",
+    "year": "2026",
+    "weekday": "MONDAY",
+    "time": "7:00 PM"
+  },
+  "monthYear": "November 2026",
+  "music": "/music/nikah.mp3",
+  "venue": {
+    "name": "Grand Anmol Banquet Hall",
+    "city": "Lahore, Pakistan",
+    "mapUrl": "https://maps.app.goo.gl/Dieu8bxvx3km3qc46?g_st=aw"
+  },
+  "schedule": [
+    {
+      "time": "06:30 PM",
+      "title": "Guest Arrival",
+      "note": "Welcome drinks & seating",
+      "icon": "guests"
+    },
+    {
+      "time": "07:00 PM",
+      "title": "Bride & Groom Reception",
+      "note": "A grand welcome for the couple",
+      "icon": "reception"
+    },
+    {
+      "time": "08:00 PM",
+      "title": "Dinner",
+      "note": "A delightful feast",
+      "icon": "dinner"
+    },
+    {
+      "time": "09:00 PM",
+      "title": "Celebration",
+      "note": "Music, dance & happiness!",
+      "icon": "music"
+    }
+  ],
+  "dressCode": {
+    "heading": "Dress Code",
+    "event": "Walima",
+    "text": [
+      "We would love to see you in",
+      "elegant and traditional attire."
+    ],
+    "tagline": "Keep it classy and festive!",
+    "colors": [
+      {
+        "name": "Emerald\nGreen",
+        "hex": "#1b4630",
+        "swatch": "emerald"
+      },
+      {
+        "name": "Maroon",
+        "hex": "#7b1d22",
+        "swatch": "maroon"
+      },
+      {
+        "name": "Navy Blue",
+        "hex": "#1d3a73",
+        "swatch": "navy"
+      },
+      {
+        "name": "Gold / Beige",
+        "hex": "#d6bf94",
+        "swatch": "gold"
+      }
+    ]
+  },
+  "blessing": {
+    "heading": "With love, we begin.",
+    "lines": [
+      "We are delighted to invite you to",
+      "be a part of our special day. Your",
+      "presence will make our celebration",
+      "more meaningful and complete."
+    ]
+  },
+  "countdown": {
+    "title": "Counting the days.",
+    "until": "until we say",
+    "closing": "I do."
+  },
+  "saveTheDate": {
+    "note": [
+      "We can't wait",
+      "to celebrate with you!"
+    ]
+  }
+}
