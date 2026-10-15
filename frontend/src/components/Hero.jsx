@@ -1,5 +1,7 @@
+
 import { useLayoutEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
+import '@fontsource/playfair-display/400-italic.css'
 import config from '../config.json'
 
 const W = 941
@@ -70,16 +72,29 @@ const img = (src, x, y, w, h, extra = {}) => (
 const COPPER =
   'linear-gradient(180deg,#74380a 0%,#8f4f17 55%,#a8672a 100%)'
 
+// Playfair Display Italic for the invitation names
 const script = {
-  fontFamily: "'Great Vibes', cursive",
+  fontFamily: "'Playfair Display', serif",
+  fontStyle: 'italic',
+  fontWeight: 400,
+  letterSpacing: '0',
   background: COPPER,
   WebkitBackgroundClip: 'text',
   backgroundClip: 'text',
   color: 'transparent',
   WebkitTextFillColor: 'transparent',
   padding: '0.12em 0.18em',
-  lineHeight: 0.9,
+  lineHeight: 1.1,
   whiteSpace: 'nowrap',
+}
+
+const scriptPlain = {
+  fontFamily: "'Playfair Display', serif",
+  fontStyle: 'italic',
+  fontWeight: 400,
+  letterSpacing: '0',
+  color: '#8f4f17',
+  lineHeight: 1.1,
 }
 
 export default function Hero({ guestName, show, onNext }) {
@@ -92,11 +107,7 @@ export default function Hero({ guestName, show, onNext }) {
     if (!el) return
 
     const calc = () => {
-      const s = Math.min(
-        el.clientWidth / W,
-        el.clientHeight / H
-      )
-
+      const s = Math.min(el.clientWidth / W, el.clientHeight / H)
       setScale(s)
       setExtra(Math.max(0, el.clientHeight / s - H))
     }
@@ -159,7 +170,6 @@ export default function Hero({ guestName, show, onNext }) {
           transformOrigin: 'top center',
         }}
       >
-        {/* Paper background */}
         <div
           className="absolute inset-0"
           style={{
@@ -169,7 +179,7 @@ export default function Hero({ guestName, show, onNext }) {
           }}
         />
 
-        {/* Garden scene */}
+        {/* Garden */}
         <motion.div
           className="absolute inset-0"
           initial={{ opacity: 0, y: 40 }}
@@ -187,7 +197,7 @@ export default function Hero({ guestName, show, onNext }) {
           {img('garden.png', 0, 907 + extra, 941, 765)}
         </motion.div>
 
-        {/* Top-left flowers */}
+        {/* Top-left roses */}
         <motion.div
           className="absolute"
           style={{
@@ -343,7 +353,7 @@ export default function Hero({ guestName, show, onNext }) {
           <div>their families</div>
         </motion.div>
 
-        {/* Personalised guest greeting */}
+        {/* Guest greeting */}
         {guestName && (
           <motion.p
             {...rise(0.4)}
@@ -362,50 +372,30 @@ export default function Hero({ guestName, show, onNext }) {
           </motion.p>
         )}
 
-        {/* Names and family details from config.json */}
+        {/* Invitation names — Playfair Display Italic */}
         <motion.div
           {...rise(0.7)}
           className="absolute flex flex-col items-center text-center"
-          style={{ left: 0, top: 505 + extra * 0.5, width: W }}
+          style={{
+            left: 0,
+            top: 478 + extra * 0.5,
+            width: W,
+            gap: 8,
+          }}
         >
-          {/* groom: big script */}
-          <span style={{ ...script, fontFamily: "'Pinyon Script', 'Great Vibes', cursive", fontSize: 175 }}>
+          <span style={{ ...script, fontSize: 150 }}>
             {config.hero?.groom ?? 'Mr. Ali'}
           </span>
 
-          {/* "with": small italic serif */}
-          <span
-            style={{
-              fontFamily: "'Cormorant Garamond', serif",
-              fontStyle: 'italic',
-              fontWeight: 600,
-              fontSize: 50,
-              lineHeight: '56px',
-              color: '#8f4f17',
-              marginTop: 0,
-            }}
-          >
+          <span style={{ ...scriptPlain, fontSize: 48 }}>
             {config.hero?.joiner ?? 'with'}
           </span>
 
-          {/* "DAUGHTER OF": small spaced capitals */}
-          <span
-            style={{
-              fontFamily: "'Cormorant Garamond', serif",
-              fontWeight: 600,
-              fontSize: 32,
-              letterSpacing: '0.31em',
-              paddingLeft: '0.31em',
-              textTransform: 'uppercase',
-              color: '#6b3a12',
-              marginTop: 12,
-            }}
-          >
+          <span style={{ ...scriptPlain, fontSize: 42 }}>
             {config.hero?.relation ?? 'Daughter of'}
           </span>
 
-          {/* father's name: same script style as the groom */}
-          <span style={{ ...script, fontFamily: "'Pinyon Script', 'Great Vibes', cursive", fontSize: 88, marginTop: 0 }}>
+          <span style={{ ...scriptPlain, fontSize: 52 }}>
             {config.hero?.father ?? 'Muhammad Amair'}
           </span>
         </motion.div>

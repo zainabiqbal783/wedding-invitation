@@ -1,10 +1,10 @@
 {
   "hero": {
-  "groom": "Mr. Ali",
-  "joiner": "with",
-  "relation": "Daughter of",
-  "father": "Muhammad Amair"
-},
+    "groom": "Mr. Ali",
+    "joiner": "with",
+    "relation": "Daughter of",
+    "father": "Muhammad Amair"
+  },
   "weddingDate": "2026-11-16T19:00:00+05:00",
   "dateDisplay": {
     "day": "16",
@@ -19,6 +19,24 @@
     "name": "Grand Anmol Banquet Hall",
     "city": "Lahore, Pakistan",
     "mapUrl": "https://maps.app.goo.gl/Dieu8bxvx3km3qc46?g_st=aw"
+  },
+  "invitation": {
+    "host": "Mr. & Mrs. Shafaqat Ali",
+    "lines": [
+      "cordially invite you to the Walima",
+      "ceremony of their beloved son."
+    ]
+  },
+  "celebrate": {
+    "title": "Come celebrate with us",
+    "lines": [
+      "A beautiful new chapter begins,",
+      "blessed by Allah's endless grace.",
+      "Join us to celebrate a bond of love,",
+      "and a lifetime of happiness and peace.",
+      "Your presence and prayers will make",
+      "this blessed occasion truly special."
+    ]
   },
   "schedule": [
     {
@@ -80,10 +98,10 @@
   "blessing": {
     "heading": "With love, we begin.",
     "lines": [
-      "We are delighted to invite you to",
-      "be a part of our special day. Your",
-      "presence will make our celebration",
-      "more meaningful and complete."
+      "In the name of Allah, the Most Merciful,",
+      "we begin this beautiful celebration.",
+      "Mr. & Mrs. Shafaqat Ali cordially invite you",
+      "to the Walima ceremony of their beloved son."
     ]
   },
   "countdown": {
