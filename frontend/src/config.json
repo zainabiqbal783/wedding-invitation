@@ -1,11 +1,10 @@
 {
-  "couple": {
-    "first": "Mr. Ali",
-    "second": "Mrs. Ali",
-    "monogram": "A",
-    "line1": "Mr. &",
-    "line2": "Mrs. Ali"
-  },
+  "hero": {
+  "groom": "Mr. Ali",
+  "joiner": "with",
+  "relation": "Daughter of",
+  "father": "Muhammad Amair"
+},
   "weddingDate": "2026-11-16T19:00:00+05:00",
   "dateDisplay": {
     "day": "16",
